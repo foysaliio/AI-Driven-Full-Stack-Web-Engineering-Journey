@@ -35,3 +35,31 @@
 // Total Properties: 4
 // Has Email: false
 
+const student = {
+  name: "Foysal",
+  age: 24,
+  university: "DPI",
+  department: "EEE",
+};
+
+function objOperation(obj) {
+  for (let key in obj) {
+    console.log(key);
+  }
+
+  for (let key in obj) {
+    console.log(obj[key]);
+  }
+
+  for (let key in obj) {
+    console.log(key, ": ", obj[key]);
+  }
+
+  let objKeyCount = Object.keys(obj).length; // ["name", "age", "university", "department"]
+  console.log("Total Properties: ", objKeyCount);
+
+  let hasEmailProperty = obj.hasOwnProperty("email");
+  console.log("Has Email: ", hasEmailProperty);
+}
+
+objOperation(student);
