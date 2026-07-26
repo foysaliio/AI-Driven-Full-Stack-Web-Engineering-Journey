@@ -3,7 +3,7 @@
 function generateAvg(arr) {
   let sum = 0;
 
-  for (number of arr) {
+  for (const number of arr) {
     sum += number;
   }
 
