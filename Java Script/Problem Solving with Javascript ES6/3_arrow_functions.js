@@ -69,3 +69,4 @@ console.log(getGrade(45));
 console.log(getGrade("Foysal"));
 console.log(getGrade([]));
 console.log(getGrade({}));
+console.log(getGrade(false));
