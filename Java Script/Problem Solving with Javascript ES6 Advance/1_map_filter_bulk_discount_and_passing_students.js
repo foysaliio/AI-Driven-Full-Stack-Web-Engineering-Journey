@@ -25,4 +25,44 @@ let productPrices = [500, 1000, 250, 400, 700];
 console.log(applyDiscount(productPrices, 10));
 console.log(productPrices);
 
+/*
+  Problem 2: Passing Students Filter
+  getPassingStudents(students, threshold) — return only the students
+  whose marks are greater than or equal to the given threshold.
 
+  Input:
+    students = [
+      { name: "Rafi", marks: 75 },
+      { name: "Karim", marks: 40 },
+      { name: "Utsho", marks: 60 },
+    ]
+    threshold = 60
+
+  Output:
+    [
+      { name: "Rafi", marks: 75 },
+      { name: "Utsho", marks: 60 },
+    ]
+*/
+
+let getPassingStudents = (students, threshold) => {
+  let filteredStudents = students.filter((student) => {
+    // console.log(student);
+
+    // if(student.marks>=threshold){
+    //   return true;
+    // }else{
+    //   return false;
+    // }
+    return student.marks >= threshold;
+  });
+  return filteredStudents;
+};
+
+let students = [
+  { name: "Rafi", marks: 75 },
+  { name: "Karim", marks: 40 },
+  { name: "Foysal", marks: 80 },
+  { name: "Akash", marks: 59 },
+];
+console.log(getPassingStudents(students, 60));
