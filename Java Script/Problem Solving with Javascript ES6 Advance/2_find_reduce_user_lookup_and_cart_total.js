@@ -45,11 +45,6 @@ console.log(findUserById(users, 3));
     160   (20*3 + 50*2)
 */
 
-// Accumulator -> 0
-// Pen -> Accumulator =  0 + (20 * 3) = 60
-// Notebook -> Accumulator = 60 + (50 * 2)
-// Accumulator -> 160
-
 let getCartTotal = (cart) => {
   let total = cart.reduce((accum, item) => {
     return accum + item.price * item.qty;
