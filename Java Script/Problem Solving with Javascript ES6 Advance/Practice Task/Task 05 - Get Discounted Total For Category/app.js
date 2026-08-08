@@ -1,9 +1,10 @@
 const getDiscountedTotalForCategory = (products, category) => {
-  const filterProduct = products.filter((item) => item.category === category);
-  const filterPrices = filterProduct.map((item) => item.price * 0.9);
-  const totalPrice = filterPrices.reduce((accum, price) => {
-    return accum + price;
-  }, 0);
+  const totalPrice = products
+    .filter((item) => item.category === category)
+    .map((item) => item.price * 0.9)
+    .reduce((accum, price) => {
+      return accum + price;
+    }, 0);
   return totalPrice;
 };
 
