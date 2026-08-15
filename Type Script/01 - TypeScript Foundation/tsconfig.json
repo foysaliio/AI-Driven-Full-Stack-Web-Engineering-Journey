@@ -1,7 +1,0 @@
-{
-  "compilerOptions": {
-    "noEmitOnError": true,
-    "module": "ESNext",
-    "moduleDetection": "legacy"
-  }
-}
