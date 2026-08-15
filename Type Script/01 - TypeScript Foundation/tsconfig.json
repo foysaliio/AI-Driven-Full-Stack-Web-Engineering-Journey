@@ -1,16 +1,10 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-
-    "sourceMap": false,
-    "declaration": false,
-    "declarationMap": false,
-
+    "rootDir": "./TS",
+    "outDir": "./JS",
     "noEmitOnError": true,
-
-    "strict": true,
-    "skipLibCheck": true
+    "module": "ESNext",
+    "moduleDetection": "legacy"
   },
-
-  "exclude": ["**/*.js", "node_modules"]
+  "include": ["TS/**/*.ts"]
 }
