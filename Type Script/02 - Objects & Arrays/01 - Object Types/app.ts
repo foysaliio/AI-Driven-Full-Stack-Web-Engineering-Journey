@@ -22,15 +22,15 @@ const bioData: {
   profession: string;
   hasDriversLicencs: boolean;
   idCode: number;
-  isMarrid?: boolean;
-  bankBalance?: null;
+  isMarrid: boolean;
+  bankBalance: null;
 } = {
   fullName: "Kabir Singh",
   profession: "Developer",
   hasDriversLicencs: true,
   idCode: 202,
   isMarrid: false,
-  //bankBalance: null, provide not an error, because it's optional.
+  bankBalance: null,
 };
 
 console.log(bioData);

@@ -16,7 +16,7 @@ const bioData = {
     hasDriversLicencs: true,
     idCode: 202,
     isMarrid: false,
-    //bankBalance: null, provide not an error, because it's optional.
+    bankBalance: null,
 };
 console.log(bioData);
 console.log(bioData.bankBalance);
