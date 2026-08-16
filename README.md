@@ -66,11 +66,11 @@ Every commit represents a step forward in my journey to becoming a better softwa
 
 ## 📈 Progress
 
-- [ ] Git & GitHub
-- [ ] HTML
-- [ ] CSS
+- [x] Git & GitHub
+- [x] HTML
+- [x] CSS
 - [ ] Tailwind CSS
-- [ ] JavaScript
+- [x] JavaScript
 - [ ] TypeScript
 - [ ] React
 - [ ] Next.js
@@ -90,7 +90,7 @@ This repository is my personal learning journal. It reflects my progress, experi
 
 ---
 
-> *"Success is the sum of small efforts, repeated day in and day out."* — Robert Collier
+> _"Success is the sum of small efforts, repeated day in and day out."_ — Robert Collier
 
 ⭐ If you're on a similar journey, feel free to explore, learn, or share your feedback.
 
