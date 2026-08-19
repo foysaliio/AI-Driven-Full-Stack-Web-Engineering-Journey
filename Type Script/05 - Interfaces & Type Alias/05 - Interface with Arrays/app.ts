@@ -1,0 +1,36 @@
+// An interface can define the structure of objects
+// that are stored inside an array.
+
+interface User {
+  name: string;
+  age: number;
+}
+
+let users: User[] = [
+  {
+    name: "Foysal",
+    age: 22,
+  },
+  {
+    name: "Rahim",
+    age: 25,
+  },
+  {
+    name: "Karim",
+    age: 28,
+  },
+];
+
+console.log(users);
+
+console.log(users[0].name);
+console.log(users[1].age);
+
+// Adding another valid user
+
+users.push({
+  name: "Hasan",
+  age: 30,
+});
+
+console.log(users);
