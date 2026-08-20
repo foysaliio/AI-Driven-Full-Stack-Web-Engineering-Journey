@@ -1,0 +1,13 @@
+// The ! operator tells TypeScript that a value is not null or undefined.
+
+let username: string | null = "Foysal";
+
+console.log(username!.toUpperCase());
+
+// DOM example
+
+const button = document.querySelector("#submit") as HTMLButtonElement;
+
+button!.addEventListener("click", () => {
+  console.log("Button clicked");
+});
