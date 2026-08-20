@@ -3,7 +3,10 @@
 let username = "Foysal";
 console.log(username.toUpperCase());
 // DOM example
-const button = document.querySelector("#submit");
-button.addEventListener("click", () => {
-    console.log("Button clicked");
+/**
+const button = document.querySelector("#submit") as HTMLButtonElement;
+
+button!.addEventListener("click", () => {
+  console.log("Button clicked");
 });
+ **/
