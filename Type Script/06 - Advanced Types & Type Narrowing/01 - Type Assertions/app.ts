@@ -8,11 +8,13 @@ console.log(username.toUpperCase());
 
 // Another example
 
+/** 
 let input = document.querySelector("#username") as HTMLInputElement;
 
 input.value = "Foysal";
 
 console.log(input.value);
+**/
 
 // Alternative syntax
 
