@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "noEmitOnError": true,
+    "moduleDetection": "legacy"
+  },
+  "include": ["*.ts"]
+}
