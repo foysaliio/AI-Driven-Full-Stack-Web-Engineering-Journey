@@ -1,19 +1,18 @@
 "use strict";
-// keyof can be combined with generics
-// to safely access object properties.
-function getProperty(object, key) {
-    return object[key];
-}
-const user = {
-    name: "Foysal",
-    age: 22,
-    email: "foysal@example.com",
+// Interfaces can also use generics.
+const userResponse = {
+    success: true,
+    data: {
+        name: "Foysal",
+        age: 22,
+    },
+    message: "User loaded successfully",
 };
-const username = getProperty(user, "name");
-const age = getProperty(user, "age");
-const email = getProperty(user, "email");
-console.log(username);
-console.log(age);
-console.log(email);
-// This will produce a TypeScript error:
-// const address = getProperty(user, "address");
+console.log(userResponse.data.name);
+console.log(userResponse.data.age);
+const usersResponse = {
+    success: true,
+    data: ["Foysal", "Rahim", "Karim"],
+    total: 3,
+};
+console.log(usersResponse.data);
