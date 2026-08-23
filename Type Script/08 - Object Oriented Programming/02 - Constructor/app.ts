@@ -19,3 +19,21 @@ const phone = new Product("Phone", 35000, "Electronics");
 
 console.log(laptop);
 console.log(phone);
+
+class Student {
+  name: string;
+  idNumber: number;
+  subject: string[];
+
+  constructor(name: string, idNumber: number, subject: string[]) {
+    this.name = name;
+    this.idNumber = idNumber;
+    this.subject = subject;
+  }
+}
+
+const foysal = new Student("Foysal", 101, ["Math", "Physics", "Chemistry"]);
+const hridoy = new Student("Hridoy", 102, ["Accounting", "Finance"]);
+
+console.log(foysal);
+console.log(hridoy);
