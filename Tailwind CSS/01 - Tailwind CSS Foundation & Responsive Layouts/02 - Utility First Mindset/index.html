@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Utility First Mindset</title>
+  </head>
+
+  <body class="min-h-screen bg-slate-100 p-8">
+    <main class="mx-auto max-w-5xl">
+      <!--
+        Think about styling responsibilities:
+
+        Width
+        Background
+        Padding
+        Border
+        Radius
+        Typography
+        Layout
+      -->
+
+      <article
+        class="max-w-md mx-auto overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg"
+      >
+        <div class="h-52 bg-linear-to-br from-blue-500 to-indigo-700"></div>
+
+        <div class="p-6">
+          <p
+            class="text-sm font-semibold uppercase tracking-wide text-blue-600"
+          >
+            Featured
+          </p>
+
+          <h1 class="mt-2 text-2xl font-bold text-slate-900">
+            Developer Workspace
+          </h1>
+
+          <p class="mt-3 leading-7 text-slate-600">
+            Build complete interfaces by combining small utility classes.
+          </p>
+
+          <div class="mt-6 flex items-center justify-between gap-4">
+            <span class="text-xl font-bold text-slate-900"> ৳25,000 </span>
+
+            <button
+              class="rounded-lg bg-blue-600 px-4 py-2 font-semibold text-white"
+            >
+              Buy Now
+            </button>
+          </div>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
