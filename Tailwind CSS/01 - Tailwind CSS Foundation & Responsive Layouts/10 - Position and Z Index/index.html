@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Position and Z Index</title>
+  </head>
+
+  <body class="min-h-screen bg-slate-100">
+    <!-- Sticky header. -->
+    <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/90 p-4">
+      <div class="mx-auto max-w-6xl font-bold">Sticky Header</div>
+    </header>
+
+    <main class="mx-auto max-w-6xl p-6">
+      <!-- relative creates a positioning context. -->
+      <article
+        class="relative overflow-hidden rounded-2xl bg-slate-900 p-8 text-white"
+      >
+        <!-- Positioned relative to the parent article. -->
+        <span
+          class="absolute right-4 top-4 rounded-full bg-blue-600 px-3 py-1 text-sm"
+        >
+          New
+        </span>
+
+        <h1 class="text-3xl font-bold">Positioning</h1>
+
+        <p class="mt-3 text-slate-300">
+          Absolute elements are often positioned inside relative parents.
+        </p>
+      </article>
+
+      <div class="h-[120vh]"></div>
+    </main>
+
+    <!-- Fixed to the viewport. -->
+    <button
+      class="fixed bottom-6 right-6 z-40 grid size-14 place-items-center rounded-full bg-blue-600 text-2xl text-white shadow-xl"
+    >
+      +
+    </button>
+  </body>
+</html>
