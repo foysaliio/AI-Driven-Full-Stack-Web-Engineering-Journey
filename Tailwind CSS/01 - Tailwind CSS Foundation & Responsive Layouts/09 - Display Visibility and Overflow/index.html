@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Display Visibility and Overflow</title>
+  </head>
+
+  <body class="min-h-screen bg-slate-100 p-6">
+    <main class="mx-auto max-w-4xl space-y-8">
+      <div class="block rounded-xl bg-white p-4">Block</div>
+
+      <span class="inline-block rounded-lg bg-blue-600 px-4 py-2 text-white">
+        Inline Block
+      </span>
+
+      <!-- hidden means display: none. -->
+      <div class="hidden">Hidden Element</div>
+
+      <!-- invisible keeps its layout space. -->
+      <div class="invisible rounded-xl bg-red-200 p-4">Invisible Element</div>
+
+      <!-- Vertical scrolling. -->
+      <div class="max-h-40 overflow-y-auto rounded-xl bg-white p-4">
+        <div class="space-y-4">
+          <div>Item 1</div>
+          <div>Item 2</div>
+          <div>Item 3</div>
+          <div>Item 4</div>
+          <div>Item 5</div>
+          <div>Item 6</div>
+          <div>Item 7</div>
+          <div>Item 8</div>
+        </div>
+      </div>
+
+      <!-- Horizontal scrolling for wide content. -->
+      <div class="overflow-x-auto rounded-xl bg-white p-4">
+        <div class="w-225">
+          Wide content that can scroll horizontally on smaller screens.
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
