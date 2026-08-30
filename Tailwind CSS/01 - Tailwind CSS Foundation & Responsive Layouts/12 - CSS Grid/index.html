@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>CSS Grid</title>
+  </head>
+
+  <body class="min-h-screen bg-slate-100 p-6">
+    <main class="mx-auto max-w-6xl space-y-10">
+      <!-- Three equal columns. -->
+      <section class="grid grid-cols-3 gap-6">
+        <article class="rounded-xl bg-white p-6">Card 1</article>
+
+        <article class="rounded-xl bg-white p-6">Card 2</article>
+
+        <article class="rounded-xl bg-white p-6">Card 3</article>
+      </section>
+
+      <!-- Twelve-column dashboard structure. -->
+      <section class="grid grid-cols-12 gap-6">
+        <aside class="col-span-3 rounded-xl bg-slate-900 p-6 text-white">
+          Sidebar
+        </aside>
+
+        <article class="col-span-9 rounded-xl bg-white p-6">
+          Main Content
+        </article>
+      </section>
+
+      <!-- Different column spans. -->
+      <section class="grid grid-cols-4 gap-4">
+        <div class="col-span-2 rounded-xl bg-blue-600 p-6 text-white">
+          Wide Card
+        </div>
+
+        <div class="rounded-xl bg-white p-6">Card</div>
+
+        <div class="rounded-xl bg-white p-6">Card</div>
+
+        <div class="col-span-full rounded-xl bg-slate-900 p-6 text-white">
+          Full Row
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
