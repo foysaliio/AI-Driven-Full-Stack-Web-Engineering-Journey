@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Responsive Breakpoint Ranges</title>
+  </head>
+
+  <body class="min-h-screen bg-slate-100 p-6">
+    <main class="mx-auto max-w-6xl space-y-6">
+      <!-- md and larger. -->
+      <div class="rounded-xl bg-white p-6 md:bg-blue-100">md and larger</div>
+
+      <!-- Only from md until before lg. -->
+      <div class="rounded-xl bg-white p-6 md:max-lg:bg-amber-200">
+        md only range
+      </div>
+
+      <!-- Only below md. -->
+      <div
+        class="rounded-xl bg-white p-6 max-md:border-4 max-md:border-blue-600"
+      >
+        Below md
+      </div>
+
+      <!-- One-off custom minimum width. -->
+      <div class="rounded-xl bg-slate-900 p-6 text-white min-[900px]:text-2xl">
+        Custom 900px breakpoint
+      </div>
+
+      <!-- One-off custom maximum width. -->
+      <div class="rounded-xl bg-white p-6 max-[500px]:bg-rose-100">
+        Custom maximum breakpoint
+      </div>
+    </main>
+  </body>
+</html>
