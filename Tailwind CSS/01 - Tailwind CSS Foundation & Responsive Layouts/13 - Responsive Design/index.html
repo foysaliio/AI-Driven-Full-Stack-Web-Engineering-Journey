@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Responsive Design</title>
+  </head>
+
+  <body class="min-h-screen bg-slate-100 p-4 md:p-6 lg:p-8">
+    <main class="mx-auto max-w-7xl">
+      <h1 class="text-3xl font-bold md:text-4xl lg:text-5xl">
+        Responsive Design
+      </h1>
+
+      <!--
+        Mobile: 1 column
+        Medium: 2 columns
+        Large: 3 columns
+      -->
+
+      <section
+        class="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3"
+      >
+        <article class="rounded-xl bg-white p-5 md:p-6">
+          <h2 class="text-xl font-bold md:text-2xl">Design</h2>
+
+          <p class="mt-2 text-slate-600">Mobile first responsive card.</p>
+        </article>
+
+        <article class="rounded-xl bg-white p-5 md:p-6">
+          <h2 class="text-xl font-bold md:text-2xl">Development</h2>
+
+          <p class="mt-2 text-slate-600">
+            Layout changes when more space becomes available.
+          </p>
+        </article>
+
+        <article class="rounded-xl bg-white p-5 md:p-6">
+          <h2 class="text-xl font-bold md:text-2xl">Deployment</h2>
+
+          <p class="mt-2 text-slate-600">
+            Every utility can receive responsive variants.
+          </p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
