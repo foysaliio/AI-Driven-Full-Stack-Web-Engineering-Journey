@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Borders Radius and Shadows</title>
+  </head>
+
+  <body class="min-h-screen bg-slate-100 p-6">
+    <main class="mx-auto max-w-5xl">
+      <div class="grid grid-cols-2 gap-6">
+        <!-- Simple border card. -->
+        <article class="rounded-xl border border-slate-200 bg-white p-6">
+          <h2 class="text-xl font-bold">Border Card</h2>
+
+          <p class="mt-2 text-slate-600">Subtle border separation.</p>
+        </article>
+
+        <!-- Elevated card. -->
+        <article class="rounded-2xl bg-white p-6 shadow-xl">
+          <h2 class="text-xl font-bold">Shadow Card</h2>
+
+          <p class="mt-2 text-slate-600">Elevated visual surface.</p>
+        </article>
+
+        <!-- Border on only one side. -->
+        <div class="rounded-xl border-l-4 border-blue-600 bg-blue-50 p-6">
+          Important notification
+        </div>
+
+        <!-- Fully rounded element. -->
+        <div
+          class="grid size-20 place-items-center rounded-full bg-slate-900 font-bold text-white shadow-lg"
+        >
+          FH
+        </div>
+      </div>
+    </main>
+
+    <!--
+      Border:
+
+      border
+      border-2
+      border-t-2
+      border-b
+      border-l-4
+
+      Radius:
+
+      rounded
+      rounded-lg
+      rounded-xl
+      rounded-2xl
+      rounded-full
+
+      Shadow:
+
+      shadow-sm
+      shadow-md
+      shadow-lg
+      shadow-xl
+      shadow-2xl
+    -->
+  </body>
+</html>
