@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Width Height and Sizing</title>
+  </head>
+
+  <body class="min-h-screen bg-slate-100 p-6">
+    <main class="mx-auto w-full max-w-6xl">
+      <h1 class="text-3xl font-bold">Width Height and Sizing</h1>
+
+      <!-- Takes 100% of the parent width. -->
+      <div class="mt-6 w-full rounded-lg bg-blue-200 p-4">w-full</div>
+
+      <!-- Takes 50% of the parent width. -->
+      <div class="mt-4 w-1/2 rounded-lg bg-emerald-200 p-4">w-1/2</div>
+
+      <!-- Fixed width and height utilities. -->
+      <div class="mt-4 h-32 w-64 rounded-lg bg-orange-200 p-4">w-64 + h-32</div>
+
+      <!-- size-* sets width and height together. -->
+      <div
+        class="mt-6 grid size-16 place-items-center rounded-full bg-slate-900 text-white"
+      >
+        FH
+      </div>
+
+      <!-- Aspect ratio keeps media dimensions proportional. -->
+      <div
+        class="mt-8 aspect-video w-full rounded-2xl bg-linear-to-r from-purple-500 to-blue-500"
+      ></div>
+    </main>
+
+    <!--
+      Useful classes:
+
+      w-full
+      w-screen
+      w-1/2
+      w-fit
+      w-auto
+
+      max-w-sm
+      max-w-xl
+      max-w-4xl
+      max-w-7xl
+
+      h-screen
+      min-h-screen
+
+      size-10
+      size-16
+
+      aspect-square
+      aspect-video
+    -->
+  </body>
+</html>
