@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Responsive Grid Layouts</title>
+  </head>
+
+  <body class="min-h-screen bg-slate-100 px-4 py-10 sm:px-6 lg:px-8">
+    <main class="mx-auto max-w-7xl">
+      <h1 class="text-3xl font-bold sm:text-4xl">Responsive Product Grid</h1>
+
+      <!--
+        Mobile: 1 column
+        sm: 2 columns
+        lg: 3 columns
+        xl: 4 columns
+      -->
+
+      <section
+        class="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 xl:grid-cols-4"
+      >
+        <article class="rounded-2xl bg-white p-5 shadow-sm">Product 1</article>
+
+        <article class="rounded-2xl bg-white p-5 shadow-sm">Product 2</article>
+
+        <article class="rounded-2xl bg-white p-5 shadow-sm">Product 3</article>
+
+        <article class="rounded-2xl bg-white p-5 shadow-sm">Product 4</article>
+
+        <article class="rounded-2xl bg-white p-5 shadow-sm">Product 5</article>
+
+        <article class="rounded-2xl bg-white p-5 shadow-sm">Product 6</article>
+      </section>
+
+      <!-- Dashboard grid. -->
+
+      <section class="mt-16 grid grid-cols-1 gap-6 lg:grid-cols-12">
+        <aside class="rounded-2xl bg-slate-900 p-6 text-white lg:col-span-3">
+          Sidebar
+        </aside>
+
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-9">
+          <article class="rounded-2xl bg-white p-6">Analytics</article>
+
+          <article class="rounded-2xl bg-white p-6">Revenue</article>
+
+          <article class="rounded-2xl bg-white p-6 sm:col-span-2">
+            Main Chart
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
