@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Complex Responsive Layout Strategy</title>
+  </head>
+
+  <body class="min-h-screen bg-slate-100">
+    <!--
+      STEP 1:
+      Divide the page into large structural regions.
+
+      Desktop:
+      Sidebar | Main
+
+      Mobile:
+      Main only
+    -->
+
+    <div
+      class="mx-auto min-h-screen max-w-400 lg:grid lg:grid-cols-[260px_1fr]"
+    >
+      <!-- Desktop sidebar. -->
+
+      <aside class="hidden bg-slate-950 p-6 text-white lg:block">
+        <h1 class="text-2xl font-bold">AdminPro</h1>
+
+        <nav class="mt-10 space-y-2">
+          <a class="block rounded-lg bg-slate-800 px-4 py-3" href="#">
+            Dashboard
+          </a>
+
+          <a class="block rounded-lg px-4 py-3 text-slate-300" href="#">
+            Orders
+          </a>
+
+          <a class="block rounded-lg px-4 py-3 text-slate-300" href="#">
+            Customers
+          </a>
+
+          <a class="block rounded-lg px-4 py-3 text-slate-300" href="#">
+            Settings
+          </a>
+        </nav>
+      </aside>
+
+      <!-- min-w-0 protects grid/flex layouts from child overflow. -->
+
+      <div class="min-w-0">
+        <!-- Responsive header. -->
+
+        <header
+          class="sticky top-0 z-40 border-b border-slate-200 bg-white px-4 py-4 sm:px-6 lg:px-8"
+        >
+          <div class="flex items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+              <!-- Mobile menu button. -->
+
+              <button
+                class="rounded-lg border border-slate-300 px-3 py-2 lg:hidden"
+              >
+                Menu
+              </button>
+
+              <div>
+                <p class="text-sm text-slate-500">Welcome back</p>
+
+                <h2 class="font-bold">Dashboard</h2>
+              </div>
+            </div>
+
+            <button
+              class="rounded-lg bg-blue-600 px-4 py-2 font-semibold text-white"
+            >
+              New Order
+            </button>
+          </div>
+        </header>
+
+        <main class="p-4 sm:p-6 lg:p-8">
+          <!--
+            STEP 2:
+            Statistics layout.
+
+            Mobile: 1
+            sm: 2
+            lg: 3
+          -->
+
+          <section class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <article
+              class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
+            >
+              <p class="text-sm text-slate-500">Revenue</p>
+
+              <p class="mt-2 text-3xl font-bold">৳128K</p>
+            </article>
+
+            <article
+              class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
+            >
+              <p class="text-sm text-slate-500">Orders</p>
+
+              <p class="mt-2 text-3xl font-bold">1,284</p>
+            </article>
+
+            <article
+              class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
+            >
+              <p class="text-sm text-slate-500">Customers</p>
+
+              <p class="mt-2 text-3xl font-bold">842</p>
+            </article>
+          </section>
+
+          <!--
+            STEP 3:
+            Main content.
+
+            Mobile: stacked
+            xl: 8 + 4 columns
+          -->
+
+          <section class="mt-6 grid grid-cols-1 gap-6 xl:grid-cols-12">
+            <article
+              class="rounded-2xl bg-white p-5 shadow-sm sm:p-6 xl:col-span-8"
+            >
+              <div
+                class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
+              >
+                <div>
+                  <h2 class="text-xl font-bold">Revenue Overview</h2>
+
+                  <p class="mt-1 text-sm text-slate-500">Current performance</p>
+                </div>
+
+                <select class="rounded-lg border border-slate-300 px-3 py-2">
+                  <option>Last 7 days</option>
+                  <option>Last 30 days</option>
+                </select>
+              </div>
+
+              <div
+                class="mt-6 grid min-h-80 place-items-center rounded-xl bg-slate-100 text-slate-500"
+              >
+                Chart Area
+              </div>
+            </article>
+
+            <aside
+              class="rounded-2xl bg-white p-5 shadow-sm sm:p-6 xl:col-span-4"
+            >
+              <h2 class="text-xl font-bold">Recent Activity</h2>
+
+              <div class="mt-5 space-y-4">
+                <div class="rounded-xl bg-slate-50 p-4">New order received</div>
+
+                <div class="rounded-xl bg-slate-50 p-4">
+                  Customer registered
+                </div>
+
+                <div class="rounded-xl bg-slate-50 p-4">Payment completed</div>
+              </div>
+            </aside>
+          </section>
+
+          <!--
+            STEP 4:
+            Protect wide tables with horizontal scrolling.
+          -->
+
+          <section class="mt-6 overflow-hidden rounded-2xl bg-white shadow-sm">
+            <div class="border-b border-slate-200 p-5">
+              <h2 class="text-xl font-bold">Recent Orders</h2>
+            </div>
+
+            <div class="overflow-x-auto">
+              <table class="w-full min-w-187.5 text-left">
+                <thead class="bg-slate-50">
+                  <tr>
+                    <th class="px-6 py-4">Order</th>
+                    <th class="px-6 py-4">Customer</th>
+                    <th class="px-6 py-4">Status</th>
+                    <th class="px-6 py-4">Total</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr class="border-t border-slate-200">
+                    <td class="px-6 py-4">#1024</td>
+                    <td class="px-6 py-4">Amina</td>
+                    <td class="px-6 py-4">Completed</td>
+                    <td class="px-6 py-4">৳12,500</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
