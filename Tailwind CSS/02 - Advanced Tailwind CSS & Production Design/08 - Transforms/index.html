@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Transforms</title>
+  </head>
+
+  <body class="min-h-screen bg-slate-950 p-6 text-white">
+    <main class="mx-auto max-w-5xl">
+      <h1 class="text-3xl font-bold">Transform Utilities</h1>
+
+      <div class="mt-10 grid grid-cols-2 gap-6 lg:grid-cols-4">
+        <div
+          class="rounded-xl bg-blue-600 p-8 text-center transition duration-300 hover:scale-110"
+        >
+          Scale
+        </div>
+
+        <div
+          class="rounded-xl bg-purple-600 p-8 text-center transition duration-300 hover:rotate-6"
+        >
+          Rotate
+        </div>
+
+        <div
+          class="rounded-xl bg-emerald-600 p-8 text-center transition duration-300 hover:-translate-y-3"
+        >
+          Translate
+        </div>
+
+        <div
+          class="rounded-xl bg-rose-600 p-8 text-center transition duration-300 hover:skew-x-6"
+        >
+          Skew
+        </div>
+      </div>
+
+      <button
+        class="mt-10 rounded-lg bg-white px-6 py-3 font-semibold text-slate-900 transition-transform duration-200 active:scale-95"
+      >
+        Click Feedback
+      </button>
+    </main>
+  </body>
+</html>
