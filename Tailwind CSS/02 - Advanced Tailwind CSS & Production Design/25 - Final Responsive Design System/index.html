@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+      @custom-variant dark (&:where(.dark, .dark *));
+
+      @theme {
+        --color-primary: #2563eb;
+        --color-primary-hover: #1d4ed8;
+
+        --color-surface: #ffffff;
+        --color-page: #f8fafc;
+
+        --radius-card: 1.5rem;
+
+        --shadow-card: 0 10px 30px rgb(15 23 42 / 0.08);
+      }
+    </style>
+
+    <title>Final Responsive Design System</title>
+  </head>
+
+  <body
+    class="min-h-screen bg-page text-slate-950 transition-colors dark:bg-slate-950 dark:text-white"
+  >
+    <!--
+      STEP 1:
+      Global navigation.
+    -->
+
+    <header
+      class="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-lg dark:border-slate-800 dark:bg-slate-950/90"
+    >
+      <div
+        class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
+      >
+        <a href="#" class="text-xl font-bold"> DevStudio </a>
+
+        <nav class="hidden items-center gap-7 md:flex">
+          <a
+            href="#"
+            class="text-slate-600 transition-colors hover:text-primary dark:text-slate-300"
+          >
+            Home
+          </a>
+
+          <a
+            href="#"
+            class="text-slate-600 transition-colors hover:text-primary dark:text-slate-300"
+          >
+            Services
+          </a>
+
+          <a
+            href="#"
+            class="text-slate-600 transition-colors hover:text-primary dark:text-slate-300"
+          >
+            Projects
+          </a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <button
+            id="themeToggle"
+            class="rounded-lg border border-slate-300 px-4 py-2 dark:border-slate-700"
+          >
+            Theme
+          </button>
+
+          <button
+            class="hidden rounded-lg bg-primary px-4 py-2 font-semibold text-white hover:bg-primary-hover sm:block"
+          >
+            Contact
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!--
+        STEP 2:
+        Hero starts stacked and becomes two columns.
+      -->
+
+      <section
+        class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:px-8 lg:py-24"
+      >
+        <div>
+          <span
+            class="inline-flex rounded-full bg-blue-100 px-3 py-1 text-sm font-semibold text-primary dark:bg-blue-500/10"
+          >
+            Modern Frontend
+          </span>
+
+          <h1
+            class="mt-5 max-w-3xl text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl"
+          >
+            Build responsive interfaces without fearing complex layouts
+          </h1>
+
+          <p
+            class="mt-6 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-400"
+          >
+            Start from structure, choose the correct layout system, build mobile
+            first, and progressively enhance the design.
+          </p>
+
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <button
+              class="rounded-lg bg-primary px-6 py-3 font-semibold text-white transition hover:bg-primary-hover motion-safe:hover:-translate-y-1"
+            >
+              Get Started
+            </button>
+
+            <button
+              class="rounded-lg border border-slate-300 px-6 py-3 font-semibold dark:border-slate-700"
+            >
+              View Projects
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="relative aspect-square overflow-hidden rounded-3xl bg-linear-to-br from-blue-600 via-purple-600 to-pink-600"
+        >
+          <div
+            class="absolute left-1/2 top-1/2 w-3/4 -translate-x-1/2 -translate-y-1/2 rounded-card border border-white/20 bg-white/10 p-8 text-white shadow-2xl backdrop-blur-xl"
+          >
+            <p class="text-sm text-white/70">Responsive System</p>
+
+            <p class="mt-2 text-3xl font-bold">Mobile → Desktop</p>
+          </div>
+        </div>
+      </section>
+
+      <!--
+        STEP 3:
+        Reusable card grid.
+      -->
+
+      <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <header class="max-w-2xl">
+          <p class="font-semibold text-primary">Services</p>
+
+          <h2 class="mt-2 text-3xl font-bold sm:text-4xl">
+            One system, many layouts
+          </h2>
+        </header>
+
+        <div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <article
+            class="group rounded-card bg-surface p-6 shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-slate-900"
+          >
+            <div
+              class="grid size-12 place-items-center rounded-xl bg-blue-100 font-bold text-primary transition-colors group-hover:bg-primary group-hover:text-white"
+            >
+              01
+            </div>
+
+            <h3 class="mt-5 text-xl font-bold">Responsive Layouts</h3>
+
+            <p class="mt-3 leading-7 text-slate-600 dark:text-slate-400">
+              Build from mobile and enhance only when more space becomes
+              available.
+            </p>
+          </article>
+
+          <article
+            class="group rounded-card bg-surface p-6 shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-slate-900"
+          >
+            <div
+              class="grid size-12 place-items-center rounded-xl bg-purple-100 font-bold text-purple-600"
+            >
+              02
+            </div>
+
+            <h3 class="mt-5 text-xl font-bold">Component Design</h3>
+
+            <p class="mt-3 leading-7 text-slate-600 dark:text-slate-400">
+              Use reusable components and consistent design tokens.
+            </p>
+          </article>
+
+          <article
+            class="group rounded-card bg-surface p-6 shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-slate-900 md:col-span-2 xl:col-span-1"
+          >
+            <div
+              class="grid size-12 place-items-center rounded-xl bg-emerald-100 font-bold text-emerald-600"
+            >
+              03
+            </div>
+
+            <h3 class="mt-5 text-xl font-bold">Production Strategy</h3>
+
+            <p class="mt-3 leading-7 text-slate-600 dark:text-slate-400">
+              Keep utilities predictable, accessible, responsive, and
+              maintainable.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!--
+        STEP 4:
+        Complex responsive content.
+      -->
+
+      <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 gap-6 xl:grid-cols-12">
+          <article
+            class="rounded-card bg-white p-6 shadow-card dark:bg-slate-900 xl:col-span-8"
+          >
+            <div
+              class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
+            >
+              <div>
+                <h2 class="text-2xl font-bold">Performance</h2>
+
+                <p class="mt-1 text-slate-500 dark:text-slate-400">
+                  Responsive dashboard section
+                </p>
+              </div>
+
+              <select
+                class="rounded-lg border border-slate-300 bg-transparent px-4 py-2 dark:border-slate-700"
+              >
+                <option>7 Days</option>
+                <option>30 Days</option>
+              </select>
+            </div>
+
+            <div
+              class="mt-6 grid min-h-80 place-items-center rounded-2xl bg-slate-100 text-slate-500 dark:bg-slate-800"
+            >
+              Chart
+            </div>
+          </article>
+
+          <aside class="rounded-card bg-slate-900 p-6 text-white xl:col-span-4">
+            <h2 class="text-2xl font-bold">Activity</h2>
+
+            <div class="mt-6 space-y-3">
+              <div class="rounded-xl bg-white/10 p-4">New customer</div>
+
+              <div class="rounded-xl bg-white/10 p-4">New project</div>
+
+              <div class="rounded-xl bg-white/10 p-4">Payment received</div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!--
+        STEP 5:
+        Responsive table.
+      -->
+
+      <section class="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+        <div
+          class="overflow-hidden rounded-card bg-white shadow-card dark:bg-slate-900"
+        >
+          <div class="border-b border-slate-200 p-6 dark:border-slate-800">
+            <h2 class="text-xl font-bold">Recent Projects</h2>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="w-full min-w-190 text-left">
+              <thead class="bg-slate-50 dark:bg-slate-800">
+                <tr>
+                  <th class="px-6 py-4">Project</th>
+                  <th class="px-6 py-4">Client</th>
+                  <th class="px-6 py-4">Status</th>
+                  <th class="px-6 py-4">Budget</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr class="border-t border-slate-200 dark:border-slate-800">
+                  <td class="px-6 py-4">Dashboard</td>
+
+                  <td class="px-6 py-4">Acme</td>
+
+                  <td class="px-6 py-4">Active</td>
+
+                  <td class="px-6 py-4">৳120K</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const themeToggle = document.querySelector("#themeToggle");
+
+      themeToggle.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+      });
+    </script>
+  </body>
+</html>
