@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Advanced Responsive Patterns</title>
+  </head>
+
+  <body class="min-h-screen bg-slate-100">
+    <main class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+      <!-- Content order changes when enough space exists. -->
+      <section
+        class="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-14"
+      >
+        <div class="order-2 lg:order-1">
+          <p class="font-semibold text-blue-600">Responsive Strategy</p>
+
+          <h1
+            class="mt-3 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl"
+          >
+            Progressive Complexity
+          </h1>
+
+          <p
+            class="mt-5 max-w-xl text-base leading-7 text-slate-600 sm:text-lg"
+          >
+            Start with a simple layout and add complexity only when the
+            available width supports it.
+          </p>
+        </div>
+
+        <div
+          class="order-1 aspect-video rounded-3xl bg-linear-to-br from-blue-500 to-purple-700 lg:order-2 lg:aspect-square"
+        ></div>
+      </section>
+
+      <!-- Different layout behavior inside a specific width range. -->
+      <section
+        class="mt-16 grid grid-cols-1 gap-5 md:grid-cols-2 md:max-xl:gap-8 xl:grid-cols-4"
+      >
+        <div class="rounded-xl bg-white p-6">01</div>
+        <div class="rounded-xl bg-white p-6">02</div>
+        <div class="rounded-xl bg-white p-6">03</div>
+        <div class="rounded-xl bg-white p-6">04</div>
+      </section>
+
+      <!-- Show/hide based on useful layout conditions. -->
+      <p class="mt-8 rounded-xl bg-amber-100 p-4 text-amber-900 lg:hidden">
+        Compact navigation would be used at this width.
+      </p>
+    </main>
+  </body>
+</html>
