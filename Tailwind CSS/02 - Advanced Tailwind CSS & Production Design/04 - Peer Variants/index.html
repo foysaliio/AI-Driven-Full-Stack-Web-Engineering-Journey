@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Peer Variants</title>
+  </head>
+
+  <body class="min-h-screen bg-slate-100 p-6">
+    <main class="mx-auto max-w-lg">
+      <h1 class="text-3xl font-bold">Peer Variants</h1>
+
+      <form class="mt-8 space-y-8 rounded-2xl bg-white p-6 shadow-sm">
+        <label class="block">
+          <span class="font-medium text-slate-800"> Email Address </span>
+
+          <!-- The input becomes the peer. -->
+          <input
+            type="email"
+            required
+            placeholder="you@example.com"
+            class="peer mt-2 w-full rounded-lg border border-slate-300 px-4 py-3 outline-none focus:border-blue-500"
+          />
+
+          <!-- This sibling reacts to the input state. -->
+          <span class="mt-2 hidden text-sm text-red-600 peer-invalid:block">
+            Please enter a valid email address.
+          </span>
+        </label>
+
+        <label
+          class="flex cursor-pointer items-center gap-3 rounded-xl border border-slate-200 p-4"
+        >
+          <input type="checkbox" class="peer size-5" />
+
+          <span
+            class="text-slate-600 peer-checked:font-semibold peer-checked:text-blue-600"
+          >
+            Enable notifications
+          </span>
+        </label>
+      </form>
+    </main>
+  </body>
+</html>
