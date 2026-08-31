@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Data and ARIA Variants</title>
+  </head>
+
+  <body class="min-h-screen bg-slate-100 p-6">
+    <main class="mx-auto max-w-3xl space-y-8">
+      <!-- Data attribute state. -->
+      <button
+        data-active
+        class="rounded-lg border border-slate-300 bg-white px-5 py-3 font-semibold data-active:border-blue-600 data-active:bg-blue-50 data-active:text-blue-700"
+      >
+        Active Tab
+      </button>
+
+      <!-- A specific data value. -->
+      <div
+        data-size="large"
+        class="rounded-xl bg-white p-4 data-[size=large]:p-8"
+      >
+        Large data attribute state
+      </div>
+
+      <!-- ARIA state can also drive styling. -->
+      <button
+        id="menuButton"
+        aria-expanded="false"
+        class="rounded-lg bg-slate-900 px-5 py-3 font-semibold text-white aria-expanded:bg-blue-600"
+      >
+        Toggle Menu
+      </button>
+
+      <div id="menu" class="hidden rounded-xl bg-white p-6 shadow-lg">
+        Menu Content
+      </div>
+    </main>
+
+    <script>
+      // Toggle both accessibility state and UI visibility.
+
+      const button = document.querySelector("#menuButton");
+      const menu = document.querySelector("#menu");
+
+      button.addEventListener("click", () => {
+        const expanded = button.getAttribute("aria-expanded") === "true";
+
+        button.setAttribute("aria-expanded", String(!expanded));
+
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
