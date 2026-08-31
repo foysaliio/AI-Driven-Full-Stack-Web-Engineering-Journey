@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+      @layer components {
+        /* A small reusable class is acceptable when it genuinely helps. */
+
+        .btn-primary {
+          border-radius: var(--radius-lg);
+          background-color: var(--color-blue-600);
+          padding-inline: --spacing(5);
+          padding-block: --spacing(3);
+          font-weight: var(--font-weight-semibold);
+          color: var(--color-white);
+        }
+
+        .btn-primary:hover {
+          background-color: var(--color-blue-700);
+        }
+      }
+    </style>
+
+    <title>Reusable Styling</title>
+  </head>
+
+  <body class="min-h-screen bg-slate-100 p-6">
+    <main class="mx-auto max-w-4xl">
+      <!-- Repeated utilities are not automatically bad. -->
+      <button
+        class="rounded-lg bg-slate-900 px-5 py-3 font-semibold text-white"
+      >
+        Utility Button
+      </button>
+
+      <!-- Custom component class when an abstraction is genuinely useful. -->
+      <button class="btn-primary ml-4">Reusable Button</button>
+
+      <!-- Complex repeated structures should usually become real components
+           in React rather than large custom CSS classes. -->
+      <article class="mt-10 rounded-2xl bg-white p-6 shadow-sm">
+        <h2 class="text-xl font-bold">Product Card</h2>
+
+        <p class="mt-2 text-slate-600">
+          In React, this entire structure should usually become a component.
+        </p>
+      </article>
+    </main>
+  </body>
+</html>
