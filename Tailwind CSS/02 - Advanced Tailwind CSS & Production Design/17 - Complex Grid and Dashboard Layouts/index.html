@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Complex Dashboard Grid</title>
+  </head>
+
+  <body class="min-h-screen bg-slate-100">
+    <!-- Custom grid tracks are excellent for app shells. -->
+    <div
+      class="min-h-screen lg:grid lg:grid-cols-[240px_minmax(0,1fr)]"
+    >
+      <aside
+        class="hidden border-r border-slate-800 bg-slate-950 p-6 text-white lg:block"
+      >
+        <h1 class="text-2xl font-bold">
+          Dashboard
+        </h1>
+
+        <nav class="mt-10 space-y-2 text-slate-300">
+          <a class="block rounded-lg bg-slate-800 px-4 py-3" href="#">
+            Overview
+          </a>
+
+          <a class="block px-4 py-3" href="#">
+            Analytics
+          </a>
+
+          <a class="block px-4 py-3" href="#">
+            Customers
+          </a>
+        </nav>
+      </aside>
+
+      <div class="min-w-0">
+        <header class="border-b border-slate-200 bg-white p-5">
+          <h2 class="text-xl font-bold">
+            Analytics Overview
+          </h2>
+        </header>
+
+        <main class="p-4 sm:p-6 lg:p-8">
+          <!-- Bento-style responsive grid. -->
+          <section
+            class="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4"
+          >
+            <article class="rounded-2xl bg-white p-6">
+              Revenue
+            </article>
+
+            <article class="rounded-2xl bg-white p-6">
+              Customers
+            </article>
+
+            <article
+              class="rounded-2xl bg-blue-600 p-6 text-white md:col-span-2"
+            >
+              Main KPI
+            </article>
+
+            <article
+              class="min-h-80 rounded-2xl bg-white p-6 md:col-span-2 xl:col-span-3"
+            >
+              Main Chart
+            </article>
+
+            <article
+              class="rounded-2xl bg-slate-900 p-6 text-white"
+            >
+              Activity
+            </article>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
