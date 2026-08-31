@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Responsive Navigation Strategy</title>
+  </head>
+
+  <body class="min-h-screen bg-slate-100">
+    <header class="border-b border-slate-200 bg-white">
+      <div
+        class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
+      >
+        <a href="#" class="text-xl font-bold"> DevSpace </a>
+
+        <!-- Desktop navigation. -->
+        <nav class="hidden items-center gap-7 md:flex">
+          <a href="#" class="text-slate-600 hover:text-blue-600"> Home </a>
+
+          <a href="#" class="text-slate-600 hover:text-blue-600"> Projects </a>
+
+          <a href="#" class="text-slate-600 hover:text-blue-600"> About </a>
+        </nav>
+
+        <button
+          id="menuButton"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+          class="rounded-lg border border-slate-300 px-4 py-2 md:hidden"
+        >
+          Menu
+        </button>
+      </div>
+
+      <!-- Mobile navigation. -->
+      <nav
+        id="mobileMenu"
+        class="hidden border-t border-slate-200 px-4 py-4 md:hidden"
+      >
+        <div class="flex flex-col gap-3">
+          <a class="rounded-lg px-3 py-2 hover:bg-slate-100" href="#"> Home </a>
+
+          <a class="rounded-lg px-3 py-2 hover:bg-slate-100" href="#">
+            Projects
+          </a>
+
+          <a class="rounded-lg px-3 py-2 hover:bg-slate-100" href="#">
+            About
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="mx-auto max-w-7xl p-6">
+      <section class="lg:grid lg:grid-cols-[260px_1fr] lg:gap-8">
+        <aside class="hidden rounded-2xl bg-slate-900 p-6 text-white lg:block">
+          Desktop Sidebar
+        </aside>
+
+        <article class="rounded-2xl bg-white p-6">Main Content</article>
+      </section>
+    </main>
+
+    <script>
+      const menuButton = document.querySelector("#menuButton");
+
+      const mobileMenu = document.querySelector("#mobileMenu");
+
+      menuButton.addEventListener("click", () => {
+        const expanded = menuButton.getAttribute("aria-expanded") === "true";
+
+        menuButton.setAttribute("aria-expanded", String(!expanded));
+
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
