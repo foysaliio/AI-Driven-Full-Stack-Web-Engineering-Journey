@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Dynamic Class Name Pitfalls</title>
+  </head>
+
+  <body class="min-h-screen bg-slate-100 p-6">
+    <main class="mx-auto max-w-4xl">
+      <h1 class="text-3xl font-bold">Dynamic Class Name Pitfalls</h1>
+
+      <section class="mt-8 space-y-5">
+        <div class="rounded-xl bg-red-500 p-5 text-white">Red Variant</div>
+
+        <div class="rounded-xl bg-blue-500 p-5 text-white">Blue Variant</div>
+      </section>
+
+      <!--
+        BAD REACT PATTERN:
+
+        function Button({ color }) {
+          return (
+            <button className={`bg-${color}-600`}>
+              Button
+            </button>
+          );
+        }
+
+        Tailwind build tools cannot reliably detect the final class names
+        because "bg-blue-600" does not appear as a complete string.
+
+
+        GOOD PATTERN:
+
+        const variants = {
+          blue: "bg-blue-600 hover:bg-blue-700",
+          red: "bg-red-600 hover:bg-red-700",
+        };
+
+        function Button({ color }) {
+          return (
+            <button className={variants[color]}>
+              Button
+            </button>
+          );
+        }
+      -->
+
+      <div
+        class="mt-10 rounded-xl border border-amber-300 bg-amber-50 p-6 text-amber-950"
+      >
+        Always keep production Tailwind class names complete and statically
+        detectable.
+      </div>
+    </main>
+  </body>
+</html>
