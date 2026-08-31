@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Conditional Classes in React</title>
+  </head>
+
+  <body class="min-h-screen bg-slate-100 p-6">
+    <main class="mx-auto max-w-4xl">
+      <h1 class="text-3xl font-bold">Conditional Class Strategy</h1>
+
+      <!-- Static visual representation. -->
+      <div class="mt-8 flex gap-4">
+        <button
+          class="rounded-lg bg-blue-600 px-5 py-3 font-semibold text-white"
+        >
+          Active
+        </button>
+
+        <button
+          class="rounded-lg bg-slate-200 px-5 py-3 font-semibold text-slate-700"
+        >
+          Inactive
+        </button>
+      </div>
+
+      <!--
+        React reference:
+
+        function Tab({ active, children }) {
+          return (
+            <button
+              className={`
+                rounded-lg px-5 py-3 font-semibold
+                ${
+                  active
+                    ? "bg-blue-600 text-white"
+                    : "bg-slate-200 text-slate-700"
+                }
+              `}
+            >
+              {children}
+            </button>
+          );
+        }
+      -->
+
+      <pre
+        class="mt-10 overflow-x-auto rounded-2xl bg-slate-950 p-6 text-sm leading-7 text-slate-200"
+      >
+Use complete Tailwind class strings for each state.
+
+active
+? "bg-blue-600 text-white"
+: "bg-slate-200 text-slate-700"
+      </pre>
+    </main>
+  </body>
+</html>
