@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+      @theme {
+        /* Semantic design tokens. */
+
+        --color-primary: #2563eb;
+        --color-primary-hover: #1d4ed8;
+
+        --color-surface: #ffffff;
+        --color-surface-muted: #f8fafc;
+
+        --color-foreground: #0f172a;
+        --color-muted: #64748b;
+
+        --radius-card: 1.25rem;
+        --radius-control: 0.625rem;
+
+        --shadow-card: 0 10px 30px rgb(15 23 42 / 0.08);
+      }
+    </style>
+
+    <title>Custom Design Tokens</title>
+  </head>
+
+  <body class="min-h-screen bg-surface-muted p-6 text-foreground">
+    <main class="mx-auto max-w-5xl">
+      <article class="rounded-card bg-surface p-8 shadow-card">
+        <p class="text-sm font-semibold text-primary">Design System</p>
+
+        <h1 class="mt-2 text-3xl font-bold">Semantic Tokens</h1>
+
+        <p class="mt-3 max-w-xl text-muted">
+          Components use design decisions instead of random one-off values.
+        </p>
+
+        <button
+          class="mt-6 rounded-control bg-primary px-5 py-3 font-semibold text-white hover:bg-primary-hover"
+        >
+          Primary Action
+        </button>
+      </article>
+    </main>
+  </body>
+</html>
