@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Arbitrary Values</title>
+  </head>
+
+  <body class="min-h-screen bg-slate-100 p-6">
+    <main class="mx-auto max-w-6xl">
+      <h1 class="text-3xl font-bold">Arbitrary Values</h1>
+
+      <!-- Use [] when the design requires a truly custom value. -->
+      <div
+        class="mt-8 w-[350px] rounded-[28px] bg-[#111827] p-[22px] text-white"
+      >
+        Exact custom values
+      </div>
+
+      <!-- Custom grid tracks. -->
+      <section class="mt-8 grid grid-cols-[240px_1fr] gap-[18px]">
+        <aside class="rounded-xl bg-slate-900 p-5 text-white">
+          240px Sidebar
+        </aside>
+
+        <main class="rounded-xl bg-white p-5">Flexible Content</main>
+      </section>
+
+      <!-- CSS calculations are also possible. -->
+      <div class="mt-8 min-h-[calc(100vh-200px)] rounded-xl bg-blue-100 p-6">
+        Calculated minimum height
+      </div>
+    </main>
+  </body>
+</html>
