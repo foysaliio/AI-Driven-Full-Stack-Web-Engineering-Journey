@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Container Queries</title>
+  </head>
+
+  <body class="min-h-screen bg-slate-100 p-6">
+    <main class="mx-auto max-w-6xl">
+      <h1 class="text-3xl font-bold">Container Queries</h1>
+
+      <div class="mt-8 grid gap-8 lg:grid-cols-2">
+        <!-- The card reacts to its container width, not viewport width. -->
+        <section class="@container rounded-2xl bg-white p-4 shadow-sm">
+          <article class="flex flex-col gap-5 @md:flex-row @md:items-center">
+            <div
+              class="aspect-video w-full rounded-xl bg-linear-to-br from-blue-500 to-purple-600 @md:aspect-square @md:w-40 @md:shrink-0"
+            ></div>
+
+            <div>
+              <p class="text-sm font-semibold text-blue-600">
+                Responsive Component
+              </p>
+
+              <h2 class="mt-2 text-2xl font-bold">Container-aware Card</h2>
+
+              <p class="mt-2 text-slate-600">
+                This card responds to the space given by its parent.
+              </p>
+            </div>
+          </article>
+        </section>
+
+        <aside class="rounded-2xl bg-slate-900 p-6 text-white">
+          Resize the browser and observe how the card responds to its own
+          container.
+        </aside>
+      </div>
+    </main>
+  </body>
+</html>
