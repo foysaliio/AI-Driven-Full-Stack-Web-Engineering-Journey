@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Accessibility and Reduced Motion</title>
+  </head>
+
+  <body class="min-h-screen bg-white p-6 text-slate-950">
+    <main class="mx-auto max-w-3xl">
+      <h1 class="text-3xl font-bold">Accessible Tailwind UI</h1>
+
+      <!-- Visible label instead of placeholder-only forms. -->
+      <label class="mt-8 block max-w-md">
+        <span class="font-medium"> Email Address </span>
+
+        <input
+          type="email"
+          class="mt-2 w-full rounded-lg border border-slate-300 px-4 py-3 outline-none focus-visible:border-blue-600 focus-visible:ring-4 focus-visible:ring-blue-100"
+        />
+      </label>
+
+      <!-- Motion-safe only adds animation when reduced motion is not requested. -->
+      <button
+        class="mt-8 rounded-lg bg-blue-600 px-5 py-3 font-semibold text-white motion-safe:transition-transform motion-safe:hover:-translate-y-1"
+      >
+        Motion Safe Button
+      </button>
+
+      <!-- Remove animation for users requesting reduced motion. -->
+      <div class="mt-8 flex items-center gap-4 rounded-xl bg-slate-100 p-5">
+        <div
+          class="size-8 animate-spin rounded-full border-4 border-slate-300 border-t-blue-600 motion-reduce:animate-none"
+        ></div>
+
+        <span> Processing </span>
+      </div>
+
+      <!-- Screen-reader-only text. -->
+      <button
+        aria-label="Close dialog"
+        class="mt-8 grid size-12 place-items-center rounded-full bg-slate-900 text-white focus-visible:outline-3 focus-visible:outline-offset-3"
+      >
+        <span aria-hidden="true">×</span>
+        <span class="sr-only">Close dialog</span>
+      </button>
+    </main>
+  </body>
+</html>
