@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Interactive States</title>
+  </head>
+
+  <body class="min-h-screen bg-slate-100 p-6">
+    <main class="mx-auto max-w-4xl">
+      <h1 class="text-3xl font-bold text-slate-950">Interactive States</h1>
+
+      <div class="mt-8 flex flex-wrap gap-4">
+        <!-- Hover changes the background. -->
+        <button
+          class="rounded-lg bg-blue-600 px-5 py-3 font-semibold text-white transition-colors hover:bg-blue-700"
+        >
+          Hover Me
+        </button>
+
+        <!-- Active applies while the button is being pressed. -->
+        <button
+          class="rounded-lg bg-slate-900 px-5 py-3 font-semibold text-white transition active:scale-95"
+        >
+          Press Me
+        </button>
+
+        <!-- Focus can style keyboard and pointer focus. -->
+        <button
+          class="rounded-lg border border-slate-300 bg-white px-5 py-3 font-semibold focus:outline-2 focus:outline-offset-2 focus:outline-blue-600"
+        >
+          Focus Me
+        </button>
+
+        <!-- Disabled styling. -->
+        <button
+          disabled
+          class="rounded-lg bg-blue-600 px-5 py-3 font-semibold text-white disabled:cursor-not-allowed disabled:opacity-40"
+        >
+          Disabled
+        </button>
+      </div>
+
+      <form class="mt-10 max-w-md">
+        <label class="block font-medium text-slate-800"> Email </label>
+
+        <input
+          type="email"
+          placeholder="you@example.com"
+          class="mt-2 w-full rounded-lg border border-slate-300 bg-white px-4 py-3 outline-none transition focus:border-blue-600 focus:ring-4 focus:ring-blue-100"
+        />
+      </form>
+    </main>
+  </body>
+</html>
