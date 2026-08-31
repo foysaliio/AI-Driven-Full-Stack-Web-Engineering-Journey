@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Responsive UI Patterns</title>
+  </head>
+
+  <body class="min-h-screen bg-slate-100 px-4 py-10 sm:px-6 lg:px-8">
+    <main class="mx-auto max-w-7xl space-y-12">
+      <!-- Responsive cards. -->
+      <section class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <article class="rounded-2xl bg-white p-6 shadow-sm">
+          Product One
+        </article>
+
+        <article class="rounded-2xl bg-white p-6 shadow-sm">
+          Product Two
+        </article>
+
+        <article class="rounded-2xl bg-white p-6 shadow-sm">
+          Product Three
+        </article>
+      </section>
+
+      <!-- Responsive form. -->
+      <form class="rounded-2xl bg-white p-6 shadow-sm">
+        <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+          <label>
+            <span class="font-medium">First Name</span>
+
+            <input
+              class="mt-2 w-full rounded-lg border border-slate-300 px-4 py-3 outline-none focus:border-blue-600 focus:ring-4 focus:ring-blue-100"
+            />
+          </label>
+
+          <label>
+            <span class="font-medium">Last Name</span>
+
+            <input
+              class="mt-2 w-full rounded-lg border border-slate-300 px-4 py-3 outline-none focus:border-blue-600 focus:ring-4 focus:ring-blue-100"
+            />
+          </label>
+
+          <label class="md:col-span-2">
+            <span class="font-medium">Email</span>
+
+            <input
+              type="email"
+              class="mt-2 w-full rounded-lg border border-slate-300 px-4 py-3"
+            />
+          </label>
+        </div>
+
+        <button
+          class="mt-6 w-full rounded-lg bg-blue-600 px-5 py-3 font-semibold text-white sm:w-auto"
+        >
+          Submit
+        </button>
+      </form>
+
+      <!-- Responsive table. -->
+      <section class="overflow-hidden rounded-2xl bg-white shadow-sm">
+        <div class="overflow-x-auto">
+          <table class="w-full min-w-[760px] text-left">
+            <thead class="bg-slate-50">
+              <tr>
+                <th class="px-6 py-4">Order</th>
+                <th class="px-6 py-4">Customer</th>
+                <th class="px-6 py-4">Status</th>
+                <th class="px-6 py-4">Total</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr class="border-t border-slate-200">
+                <td class="px-6 py-4">#1001</td>
+                <td class="px-6 py-4">Amina</td>
+                <td class="px-6 py-4">Completed</td>
+                <td class="px-6 py-4">৳8,500</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
